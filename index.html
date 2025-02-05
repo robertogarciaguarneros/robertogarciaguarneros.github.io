@@ -1,1 +1,109 @@
-Hola mundo
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header id="contact">
+      <h1>Developer C# & SQL Server</h1>
+      <p>Email: developer@email.com</p>
+      <p>
+        LinkedIn:
+        <a href="https://linkedin.com/in/developer" target="_blank"
+          >linkedin.com/in/developer</a
+        >
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/developer" target="_blank"
+          >github.com/developer</a
+        >
+      </p>
+    </header>
+
+    <section id="projects">
+      <div class="project">
+        <h2>Proyecto 1</h2>
+        <div class="carousel-wrapper">
+          <button class="prev" onclick="moveSlide(-1, 0)">&#10094;</button>
+          <div class="carousel" id="carousel-0">
+            <img src="img1.jpg" alt="Proyecto 1 - Imagen 1" />
+            <img src="img2.jpg" alt="Proyecto 1 - Imagen 2" />
+            <img src="img3.jpg" alt="Proyecto 1 - Imagen 3" />
+          </div>
+          <button class="next" onclick="moveSlide(1, 0)">&#10095;</button>
+        </div>
+        <p>Descripción del proyecto...</p>
+        <p><strong>Stack:</strong> C#, ASP.NET, SQL Server</p>
+      </div>
+    </section>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+      }
+      #projects {
+        margin-top: 20px;
+      }
+      .carousel-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 300px;
+        overflow: hidden;
+      }
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel img {
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+      }
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .prev {
+        left: 0;
+      }
+      .next {
+        right: 0;
+      }
+    </style>
+
+    <script>
+      let currentSlide = [0];
+
+      function moveSlide(direction, carouselIndex) {
+        const carousel = document.getElementById(`carousel-${carouselIndex}`);
+        const images = carousel.querySelectorAll("img");
+        const totalSlides = images.length;
+        currentSlide[carouselIndex] =
+          (currentSlide[carouselIndex] + direction + totalSlides) % totalSlides;
+        carousel.style.transform = `translateX(-${
+          currentSlide[carouselIndex] * 300
+        }px)`;
+      }
+    </script>
+  </body>
+</html>
