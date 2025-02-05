@@ -1,0 +1,81 @@
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: black;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.3); /* Brillo suave */
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(45deg, #7ed1c0, #bd7e9e, #6676a3);
+  background-size: 600% 600%;
+  animation: gradient 5s ease infinite;
+  color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Cambia el color a negro */
+  color: black;
+}
+
+.typing-effect {
+  font-size: 2em;
+  color: #00ffcc;
+  border-right: 2px solid white;
+  padding-right: 5px;
+  white-space: nowrap; /* Esto evitará que el texto se divida en líneas */
+  overflow: hidden; /* Evita que el texto se desborde */
+  width: 0; /* Inicialmente no hay texto visible */
+  animation: typing 3.5s steps(30) 1s 1 normal both,
+    blinkCaret 0.75s step-end infinite;
+}
+
+a {
+  color: #00ffcc; /* Un color de enlace futurista */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00cc99;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button {
+  background-color: #00ffcc;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+* {
+  transition: all 0.3s ease;
+}
