@@ -2,10 +2,15 @@ body {
   font-family: "JetBrains Mono", monospace;
   background-color: black;
   color: white;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.4),
-    0 0 30px rgba(0, 255, 255, 0.3); /* Brillo suave */
+  /*text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.3);  Brillo suave */
   transition: all 0.3s ease-in-out;
-  background: linear-gradient(45deg, #7ed1c0, #bd7e9e, #6676a3);
+  background: linear-gradient(
+    45deg,
+    black,
+    #5f5f5fcb,
+    #8c8c8c77
+  ); /* Colores más neutros */
   background-size: 600% 600%;
   animation: gradient 5s ease infinite;
   color: white;
@@ -78,4 +83,36 @@ button {
 
 * {
   transition: all 0.3s ease;
+}
+
+.carousel-item {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transform: scale(1); /* Aumenta ligeramente la imagen activa */
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  transform: scale(0.9); /* Las imágenes en transición serán más pequeñas */
+}
+
+.carousel-item img {
+  transition: filter 0.3s ease-in-out;
+  filter: blur(4px); /* Desenfoque en las imágenes no activas */
+}
+
+.carousel-item.active img {
+  filter: blur(0); /* Elimina el desenfoque de la imagen activa */
+}
+
+.carousel-item {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+.carousel-item.active {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Sombra más prominente en la imagen activa */
 }
