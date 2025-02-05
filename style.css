@@ -116,3 +116,25 @@ button {
 .carousel-item.active {
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Sombra más prominente en la imagen activa */
 }
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}

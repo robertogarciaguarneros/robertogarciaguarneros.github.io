@@ -20,6 +20,10 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
@@ -54,15 +58,9 @@
           >linkedin.com/in/robertoguarneros</a
         >
       </p>
-      <p>
-        GitHub:
-        <a
-          href="https://github.com/robertogarciaguarneros"
-          target="_blank"
-          class="text-white"
-          >github.com/robertogarciaguarneros</a
-        >
-      </p>
+      <div class="scroll-down">
+        <i class="bi bi-chevron-down"></i>
+      </div>
     </header>
 
     <section
@@ -189,7 +187,7 @@
           class="col-md-4 d-flex flex-column justify-content-center text-start mb-4 mb-md-0"
         >
           <h3 class="mb-3">ERP de para control de desarrollos inmobiliarios</h3>
-          <div class="mb-3 justify-content">
+          <div class="mb-3 text-justify">
             Este sistema ERP fue diseñado para optimizar la gestión y el control
             de proyectos inmobiliarios, permitiendo una administración eficiente
             de recursos, cronogramas y presupuestos. Desarrollado en C# y con
@@ -200,7 +198,7 @@
           </div>
           <div class="mb-3">
             Características principales:
-            <ul class="list">
+            <ul class="list-unstyled">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
                 <span
@@ -261,10 +259,21 @@
                   <strong>Informes y Análisis</strong>
                 </span>
               </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  title="Cuenta con una aplicación móvil para Android que funciona en modo offline y online para la actualización de información en lugares con difícil acceso a internet."
+                >
+                  <strong>Aplicación móvil</strong>
+                </span>
+              </li>
             </ul>
           </div>
           <div>
-            <strong>Stack:</strong> C#, MVC, Js, SQL Server, .NET Core 8, AWS
+            <strong>Stack:</strong> C#, MVC, Js, SQL Server, .NET Core 8, AWS,
+            Xamarin
           </div>
         </div>
         <div class="col-md-1"></div>
@@ -281,7 +290,7 @@
           class="col-md-4 d-flex flex-column justify-content-center text-start mb-4 mb-md-0"
         >
           <h3 class="mb-3">ERP de control de mobiliario y eventos</h3>
-          <div class="mb-3 justify-content">
+          <div class="mb-3 text-justify">
             Este sistema ERP está diseñado para gestionar de manera eficiente el
             inventario de mobiliario, la planificación de eventos y la
             administración de recursos logísticos. Desarrollado en C# y una base
@@ -291,7 +300,7 @@
           </div>
           <div class="mb-3">
             Características principales:
-            <ul class="list">
+            <ul class="list-unstyled">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
                 <span
@@ -541,7 +550,7 @@
           class="col-md-4 d-flex flex-column justify-content-center text-start mb-4 mb-md-0"
         >
           <h3 class="mb-3">Sistema de control de organismo de agua</h3>
-          <div class="mb-3 justify-content">
+          <div class="mb-3 text-justify">
             Este sistema está diseñado para capturar, analizar y homologar datos
             relacionados con el consumo de agua, permitiendo una gestión
             eficiente de los recursos humanos y una mejor atención a los
@@ -552,7 +561,7 @@
           </div>
           <div class="mb-3">
             Características principales:
-            <ul class="list">
+            <ul class="list-unstyled">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
                 <span
@@ -623,7 +632,7 @@
           class="col-md-4 d-flex flex-column justify-content-center text-start mb-4 mb-md-0"
         >
           <h3 class="mb-3">Microservicios para sistema de venta de casas</h3>
-          <div class="mb-3 justify-content">
+          <div class="mb-3 text-justify">
             Este sistema backend basado en microservicios permite la gestión
             eficiente de la compra y venta de bienes raíces. Desarrollado en C#
             .NET Core 6 y SQL Server, se diseñó para ser escalable, seguro y
@@ -633,7 +642,7 @@
           </div>
           <div class="mb-3">
             Características principales:
-            <ul class="list">
+            <ul class="list-unstyled">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
                 <span
@@ -684,7 +693,11 @@
           >
             <div class="carousel-inner">
               <div class="carousel-item active text-center">
-                <img src="imgs/api.png" class="w-80" alt="Servicios" />
+                <img
+                  src="imgs/img_o.png"
+                  class="d-block w-100"
+                  alt="Servicios"
+                />
               </div>
             </div>
             <button
@@ -783,7 +796,7 @@
           class="col-md-4 d-flex flex-column justify-content-center text-start mb-4 mb-md-0"
         >
           <h3 class="mb-3">Sistema de homologación de datos farmaceuticos</h3>
-          <div class="mb-3 justify-content">
+          <div class="mb-3 text-justify">
             Este sistema permite la integración, validación y unificación de
             información de clientes desde múltiples fuentes, garantizando
             coherencia, precisión y disponibilidad en tiempo real. Desarrollado
@@ -793,7 +806,7 @@
           </div>
           <div class="mb-3">
             Características principales:
-            <ul class="list">
+            <ul class="list-unstyled">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
                 <span
@@ -855,7 +868,7 @@
         >
           <h3 class="mb-3">Otros desarrollos</h3>
           <div class="mb-3">
-            <ul class="list">
+            <ul class="list-unstyled">
               <li>
                 <i class="bi bi-check-circle-fill"></i>
                 <span
@@ -931,7 +944,7 @@
           >
             <div class="carousel-inner">
               <div class="carousel-item active text-center">
-                <img src="imgs/otro.png" class="w-80" alt="Otro" />
+                <img src="imgs/img_o.png" class="d-block w-100" alt="Otro" />
               </div>
             </div>
             <button
